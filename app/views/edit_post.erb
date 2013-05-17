@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Edit Your Blogalicious Post!</h1>
+
+  
+  <form id='edit_post' action="/posts/<%=@post.id%>" method="post">
+    Post Title:
+    <br>
+    <input type="text" name="updated_title" value="<%=@post.title%>">
+    <br><br>
+
+    <TEXTAREA name="updated_body" rows="10" cols="50">
+      <%=@post.body%>
+    </TEXTAREA>
+    <br><br>
+    <input type="submit" value="Update Post"/>
+  </form>  
+    <br>
+    <br>
+  
+  <form id='delete_post' action="/posts/<%=@post.id%>/delete" method="post">
+    <input type="submit" value="Delete Post"/>
+  </form>
+
+</div>

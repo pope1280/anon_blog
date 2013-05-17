@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>All Blogalicious Posts</h1>
+
+  <ul>
+    <li><a href="/">Back to Index</a></li>
+    <br>
+
+    <% @posts.each do |post| %>
+      <li><a href="/posts/<%=post.id%>"><%=post.title%></a></li>
+    <% end %>
+
+  </ul>
+</div>
